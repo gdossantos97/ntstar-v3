@@ -1,5 +1,6 @@
 "use client";
 
+import { GlitchAccent } from "@/components/GlitchAccent";
 import { RevealText } from "@/components/RevealText";
 import { cn } from "@/lib/utils";
 
@@ -26,7 +27,9 @@ export function SectionHeading({
     <h2 className={styles}>
       <RevealText text={prefix} variant={prefixVariant} className="inline" />
       {breakBeforeAccent ? <br /> : " "}
-      <RevealText text={accent} variant="heading-accent" className="inline" />
+      <GlitchAccent text={accent} className="inline">
+        <RevealText text={accent} variant="heading-accent" className="inline" />
+      </GlitchAccent>
     </h2>
   );
 }

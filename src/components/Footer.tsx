@@ -16,7 +16,7 @@ export function Footer({ embedded = false }: FooterProps) {
       className={cn(
         "py-12",
         embedded
-          ? "relative z-10 border-t border-white/10 bg-transparent"
+          ? "relative border-t border-white/10 bg-transparent"
           : "border-t border-white/10 bg-midnight",
       )}
     >
@@ -40,7 +40,7 @@ export function Footer({ embedded = false }: FooterProps) {
           </Link>
           <RevealText
             text="Volume 01 / 2026"
-            variant="label-light"
+            variant="label"
             className="label-caps"
             as="p"
           />

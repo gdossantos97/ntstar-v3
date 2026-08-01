@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { GlitchAccent } from "@/components/GlitchAccent";
 import { RevealText } from "@/components/RevealText";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
@@ -33,7 +34,9 @@ export function HeroSection() {
 
         <h1 className="mt-6 max-w-4xl font-display text-4xl uppercase md:text-7xl lg:text-8xl">
           <RevealText text="Murder your " variant="ice" className="inline" />
-          <RevealText text="SaaS bill" variant="lime" className="inline" />
+          <GlitchAccent text="SaaS bill" className="inline">
+            <RevealText text="SaaS bill" variant="lime" className="inline" />
+          </GlitchAccent>
         </h1>
 
         <RevealText

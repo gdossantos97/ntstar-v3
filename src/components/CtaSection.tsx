@@ -4,17 +4,14 @@ import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { RevealText } from "@/components/RevealText";
 import { SectionHeading } from "@/components/SectionHeading";
-import { BackgroundLines } from "@/components/ui/background-lines";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 
 export function CtaSection() {
   return (
     <section id="contact">
-      <BackgroundLines
-        className="relative h-auto bg-midnight"
-        svgOptions={{ duration: 12 }}
-      >
-        <div className="relative z-10 flex min-h-[70vh] flex-col items-center justify-center px-5 py-24">
+      <BackgroundBeamsWithCollision className="min-h-[70vh] bg-midnight">
+        <div className="flex min-h-[70vh] flex-col items-center justify-center px-5 py-24">
           <RevealText
             text="We are not sorry"
             variant="label-lime"
@@ -52,7 +49,7 @@ export function CtaSection() {
           </div>
         </div>
         <Footer embedded />
-      </BackgroundLines>
+      </BackgroundBeamsWithCollision>
     </section>
   );
 }
