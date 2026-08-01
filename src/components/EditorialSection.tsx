@@ -26,11 +26,11 @@ export function EditorialSection() {
   }, []);
 
   return (
-    <section className="overflow-hidden bg-ice text-midnight">
-      <div className="mx-auto grid max-w-6xl lg:grid-cols-2">
+    <section className="min-h-[80vh] overflow-hidden bg-ice text-midnight">
+      <div className="mx-auto grid min-h-[80vh] max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div
           ref={containerRef}
-          className="relative min-h-[420px] lg:min-h-[640px]"
+          className="relative min-h-[45vh] lg:min-h-[80vh]"
         >
           <PixelatedCanvas
             src="/images/editorial-hand.png"
@@ -51,9 +51,9 @@ export function EditorialSection() {
           />
         </div>
 
-        <div className="relative flex flex-col justify-center px-5 py-16 lg:px-12 lg:py-24">
+        <div className="relative flex min-h-[35vh] flex-col justify-center px-5 py-12 sm:px-8 lg:min-h-[80vh] lg:px-16 lg:py-16">
           <p
-            className="pointer-events-none absolute right-4 bottom-0 hidden font-brand text-[7rem] leading-none text-midnight/[0.05] lg:block"
+            className="pointer-events-none absolute right-4 bottom-0 hidden font-brand text-[10rem] leading-none text-midnight/[0.05] lg:block xl:text-[12rem]"
             style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
             aria-hidden
           >
@@ -64,17 +64,17 @@ export function EditorialSection() {
           <SectionHeading
             prefix="Built with operators,"
             accent="not for procurement"
-            className="mt-6 text-3xl sm:text-4xl"
+            className="mt-6 text-4xl sm:text-5xl lg:text-6xl"
             backgroundClassName="bg-ice"
             variant="light"
             breakBeforeAccent
           />
-          <p className="mt-8 max-w-md text-sm leading-relaxed text-[#3d3e4a]">
+          <p className="mt-8 max-w-lg text-base leading-relaxed text-[#3d3e4a] lg:max-w-xl">
             We started ntstar because we watched good companies get quoted $80k
             for tools their teams could have been using months ago. We build
             fast, we build loud, and we hand you the keys when we are done.
           </p>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-[#3d3e4a]">
+          <p className="mt-4 max-w-lg text-base leading-relaxed text-[#3d3e4a] lg:max-w-xl">
             Ops tools your people actually open. No seats and no renewals.
           </p>
         </div>

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { BrandName } from "./BrandName";
-import { FooterBrandMark } from "./FooterBrandMark";
 import { Mark } from "./Mark";
 
 export function Footer() {
@@ -23,10 +22,6 @@ export function Footer() {
           </Link>
           <p className="label-caps text-[#7a7b86]">Volume 01 / 2026</p>
         </div>
-      </div>
-
-      <div className="mx-auto mt-10 max-w-6xl px-5 lg:px-8">
-        <FooterBrandMark />
       </div>
     </footer>
   );
