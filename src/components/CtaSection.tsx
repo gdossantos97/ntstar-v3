@@ -24,7 +24,7 @@ export function CtaSection() {
             breakBeforeAccent
           />
           <RevealText
-            text="Book a call. Tell us what you need. We will tell you honestly if we can build it in a week and what it will cost. No pitch deck required."
+            text="Book a call. Tell us what is broken. We will tell you honestly if we can ship it in a week. No pitch deck required."
             variant="body"
             className="mx-auto mt-6 block max-w-md text-center text-sm"
             as="p"

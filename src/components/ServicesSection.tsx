@@ -43,25 +43,25 @@ const yourApp = build({
   size: "your company, not a template",
   timeline: "days, not quarters",
   owned: true,
-  seats: null,
-  renewals: null,
+  bloat: null,
+  committees: null,
 });
 
-you.keep(yourApp); // no procurement theater`,
+you.keep(yourApp); // no six-month kickoff circus`,
   },
   {
-    name: "vs-agency.js",
+    name: "ship-fast.js",
     language: "javascript",
     highlightLines: [3, 4, 5],
-    code: `// Your dev agency hates this
-const comparison = {
-  agencyQuote: "$80,000",
-  ntstarBuild: "fraction of that",
-  agencyTimeline: "6 months",
-  ntstarTimeline: "days",
+    code: `// Bloatware hates this file existing
+const shipFast = {
+  roadmap: "this week",
+  stakeholders: "your ops team",
+  meetings: "one call",
+  status: "deployed",
 };
 
-// Good. We ship before their second invoice.`,
+launch(shipFast); // before the kickoff deck loads`,
   },
 ];
 

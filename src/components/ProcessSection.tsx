@@ -8,7 +8,7 @@ const steps = [
   {
     num: "01",
     title: "Tell us what is broken",
-    body: "A thirty minute call. No deck. No discovery phase that costs more than the build.",
+    body: "A thirty minute call. No deck. No six-week discovery circus.",
   },
   {
     num: "02",
@@ -18,7 +18,7 @@ const steps = [
   {
     num: "03",
     title: "You own it outright",
-    body: "No seats. No renewals. No vendor holding your roadmap hostage. It is yours.",
+    body: "Your code. Your roadmap. No vendor holding you hostage. It is yours.",
   },
 ];
 
@@ -31,7 +31,7 @@ const commands = [
 const outputs: Record<number, string[]> = {
   0: [
     "Call complete. 3 broken workflows found.",
-    "Agency quote on file: $80,000",
+    "Kickoff deck: declined",
     "Starting build...",
   ],
   1: [
@@ -42,8 +42,8 @@ const outputs: Record<number, string[]> = {
   ],
   2: [
     "Deployed to production.",
-    "No seats. No renewals.",
-    "You own it. Cancel the contract.",
+    "Ownership transferred.",
+    "The keys are yours.",
   ],
 };
 

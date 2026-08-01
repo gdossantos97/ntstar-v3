@@ -27,7 +27,7 @@ export function Footer({ embedded = false }: FooterProps) {
             <BrandName />
           </div>
           <RevealText
-            text="Internal software, built in days."
+            text="Software for operators who refuse to wait."
             variant="body"
             className="mt-4 block text-sm"
             as="p"

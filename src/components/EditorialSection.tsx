@@ -68,20 +68,20 @@ export function EditorialSection() {
             as="p"
           />
           <SectionHeading
-            prefix="Built with operators,"
-            accent="not for procurement"
+            prefix="Built for operators,"
+            accent="not committees"
             className="mt-5 text-3xl sm:mt-6 sm:text-4xl lg:text-6xl"
             variant="light"
             breakBeforeAccent
           />
           <RevealText
-            text="We started ntstar because we watched good companies get quoted $80k for tools their teams could have been using months ago. We build fast, we build loud, and we hand you the keys when we are done."
+            text="We started ntstar because we watched good companies wait six months for software their teams needed yesterday. We build fast, we build loud, and we hand you the keys when we are done."
             variant="body-light"
             className="mt-8 block max-w-lg text-base leading-relaxed lg:max-w-xl"
             as="p"
           />
           <RevealText
-            text="Ops tools your people actually open. No seats and no renewals."
+            text="Ops tools your people actually open. Built like you mean it."
             variant="body-light"
             className="mt-4 block max-w-lg text-base leading-relaxed lg:max-w-xl"
             as="p"

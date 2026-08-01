@@ -23,7 +23,7 @@ const tiers = [
   {
     name: "Enterprise",
     price: "Let's talk",
-    detail: "Custom builds at scale. Same speed, same ownership. Less procurement.",
+    detail: "Custom builds at scale. Same speed. Same ownership. Zero nonsense.",
     fit: "Teams that want results, not a six month RFP",
     color: "#1a2480",
   },
@@ -35,13 +35,13 @@ export function PricingSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-5 lg:px-8">
         <RevealText text="Pricing" variant="label" className="label-caps" as="p" />
         <SectionHeading
-          prefix="Pay once."
-          accent="Own it forever."
+          prefix="Built once."
+          accent="Yours forever."
           className="mt-4 text-3xl sm:text-4xl lg:text-5xl"
           breakBeforeAccent
         />
         <RevealText
-          text="No per seat pricing. No annual renewals. You pay for the build, you keep the thing."
+          text="You get the software. You get the keys. We get out of your way."
           variant="body"
           className="mt-4 block max-w-lg text-sm"
           as="p"

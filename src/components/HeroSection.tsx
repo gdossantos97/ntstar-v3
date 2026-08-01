@@ -17,13 +17,13 @@ export function HeroSection() {
 
         <h1 className="mt-5 max-w-4xl overflow-hidden font-display text-[2rem] leading-[0.95] uppercase sm:mt-6 sm:text-5xl md:text-7xl lg:text-8xl">
           <RevealText text="Murder your " variant="ice" className="inline" />
-          <GlitchAccent text="SaaS bill" className="inline">
-            <RevealText text="SaaS bill" variant="lime" className="inline" />
+          <GlitchAccent text="software bloat" className="inline">
+            <RevealText text="software bloat" variant="lime" className="inline" />
           </GlitchAccent>
         </h1>
 
         <RevealText
-          text="The ops tool you were quoted $80k for, built in days and owned outright. No seats. No renewals."
+          text="Custom ops tools built in days and handed over with the keys attached. The kind your team actually opens on Monday morning."
           variant="body"
           className="mt-6 block max-w-xl text-base leading-relaxed sm:mt-8 md:text-lg"
           as="p"
@@ -44,7 +44,7 @@ export function HeroSection() {
             href="#build"
             className="text-center text-sm font-medium text-muted-nt transition-colors hover:text-lime sm:text-left"
           >
-            Read the receipts →
+            See the goods →
           </Link>
         </div>
       </div>

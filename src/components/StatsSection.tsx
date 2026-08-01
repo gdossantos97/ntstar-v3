@@ -8,19 +8,19 @@ export function StatsSection() {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:gap-12 sm:px-5 md:grid-cols-3 lg:px-8">
         <div>
           <RevealText
-            text="70%"
+            text="7 days"
             variant="display-lime"
             className="font-display text-5xl sm:text-6xl lg:text-7xl"
             as="p"
           />
           <RevealText
-            text="cheaper. same tool."
+            text="to first ship."
             variant="display"
             className="mt-2 block font-display text-2xl"
             as="p"
           />
           <RevealText
-            text="Built in house, not outsourced to a six month retainer."
+            text="Not a roadmap deck. A working tool in production."
             variant="body"
             className="mt-4 block text-sm"
             as="p"
@@ -35,7 +35,7 @@ export function StatsSection() {
           />
           <p className="mt-4 font-display text-2xl">
             <RevealText
-              text="Quoted 6 months. Live in "
+              text="They said quarters. Live in "
               variant="display"
               className="inline"
             />
@@ -56,7 +56,7 @@ export function StatsSection() {
             as="p"
           />
           <RevealText
-            text="Yours to keep. Cancel the contract."
+            text="The keys are yours. No hostage situations."
             variant="body"
             className="mt-4 block text-sm"
             as="p"
