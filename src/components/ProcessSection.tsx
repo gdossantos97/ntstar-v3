@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionHeading } from "@/components/SectionHeading";
 import { Terminal } from "@/components/ui/terminal";
 
 const steps = [
@@ -50,9 +51,12 @@ export function ProcessSection() {
     <section id="how" className="bg-midnight py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <p className="label-caps text-muted-nt">How it works</p>
-        <h2 className="mt-4 font-display text-4xl text-ice lg:text-5xl">
-          Three steps. One week.
-        </h2>
+        <SectionHeading
+          prefix="Three steps."
+          accent="One week."
+          className="mt-4 text-4xl lg:text-5xl"
+          breakBeforeAccent
+        />
 
         <div className="mt-16 grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="grid gap-10">

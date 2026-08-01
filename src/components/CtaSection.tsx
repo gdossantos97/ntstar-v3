@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionHeading } from "@/components/SectionHeading";
 import { LampContainer } from "@/components/ui/lamp";
 import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 
@@ -9,9 +10,12 @@ export function CtaSection() {
     <section id="contact">
       <LampContainer className="min-h-[70vh] rounded-none bg-midnight">
         <p className="label-caps text-lime">We are not sorry</p>
-        <h2 className="mt-4 max-w-3xl text-center font-display text-4xl text-ice md:text-6xl">
-          Enterprise software is <span className="text-lime">dead</span>
-        </h2>
+        <SectionHeading
+          prefix="Enterprise software"
+          accent="is dead"
+          className="mx-auto mt-4 max-w-3xl text-center text-4xl md:text-6xl"
+          breakBeforeAccent
+        />
         <p className="mx-auto mt-6 max-w-md text-center text-sm text-muted-nt">
           Book a call. Tell us what you need. We will tell you honestly if we
           can build it in a week and what it will cost. No pitch deck required.

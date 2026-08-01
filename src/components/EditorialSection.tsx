@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { SectionHeading } from "@/components/SectionHeading";
 import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
 
 export function EditorialSection() {
@@ -60,9 +61,14 @@ export function EditorialSection() {
           </p>
 
           <p className="label-caps text-[#7a7b86]">Release 01</p>
-          <h2 className="mt-6 font-display text-3xl sm:text-4xl">
-            Built with operators, not for procurement
-          </h2>
+          <SectionHeading
+            prefix="Built with operators,"
+            accent="not for procurement"
+            className="mt-6 text-3xl sm:text-4xl"
+            backgroundClassName="bg-ice"
+            variant="light"
+            breakBeforeAccent
+          />
           <p className="mt-8 max-w-md text-sm leading-relaxed text-[#3d3e4a]">
             We started ntstar because we watched good companies get quoted $80k
             for tools their teams could have been using months ago. We build

@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionHeading } from "@/components/SectionHeading";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 const tiers = [
@@ -32,9 +33,13 @@ export function PricingSection() {
     <section id="pricing" className="bg-[#0e0e13] py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <p className="label-caps text-muted-nt">Pricing</p>
-        <h2 className="mt-4 font-display text-4xl text-ice lg:text-5xl">
-          Pay once. Own it forever.
-        </h2>
+        <SectionHeading
+          prefix="Pay once."
+          accent="Own it forever."
+          className="mt-4 text-4xl lg:text-5xl"
+          backgroundClassName="bg-[#0e0e13]"
+          breakBeforeAccent
+        />
         <p className="mt-4 max-w-lg text-sm text-muted-nt">
           No per seat pricing. No annual renewals. You pay for the build, you
           keep the thing.
