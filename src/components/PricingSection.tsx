@@ -1,5 +1,6 @@
 "use client";
 
+import { RevealText } from "@/components/RevealText";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 
@@ -32,18 +33,19 @@ export function PricingSection() {
   return (
     <section id="pricing" className="bg-[#0e0e13] py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
-        <p className="label-caps text-muted-nt">Pricing</p>
+        <RevealText text="Pricing" variant="label" className="label-caps" as="p" />
         <SectionHeading
           prefix="Pay once."
           accent="Own it forever."
           className="mt-4 text-4xl lg:text-5xl"
-          backgroundClassName="bg-[#0e0e13]"
           breakBeforeAccent
         />
-        <p className="mt-4 max-w-lg text-sm text-muted-nt">
-          No per seat pricing. No annual renewals. You pay for the build, you
-          keep the thing.
-        </p>
+        <RevealText
+          text="No per seat pricing. No annual renewals. You pay for the build, you keep the thing."
+          variant="body"
+          className="mt-4 block max-w-lg text-sm"
+          as="p"
+        />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {tiers.map((tier) => (
@@ -54,14 +56,30 @@ export function PricingSection() {
                 tier.featured ? "ring-1 ring-lime/30" : ""
               }`}
             >
-              <p className={`label-caps ${tier.featured ? "text-lime" : "text-muted-nt"}`}>
-                {tier.name}
-              </p>
-              <p className="mt-4 font-display text-4xl text-ice">{tier.price}</p>
-              <p className="mt-4 text-sm leading-relaxed text-muted-nt">
-                {tier.detail}
-              </p>
-              <p className="mt-8 text-xs text-muted-nt">{tier.fit}</p>
+              <RevealText
+                text={tier.name}
+                variant={tier.featured ? "label-lime" : "label"}
+                className="label-caps"
+                as="p"
+              />
+              <RevealText
+                text={tier.price}
+                variant="ice"
+                className="mt-4 block font-display text-4xl"
+                as="p"
+              />
+              <RevealText
+                text={tier.detail}
+                variant="body"
+                className="mt-4 block text-sm leading-relaxed"
+                as="p"
+              />
+              <RevealText
+                text={tier.fit}
+                variant="small"
+                className="mt-8 block text-xs"
+                as="p"
+              />
             </CardSpotlight>
           ))}
         </div>

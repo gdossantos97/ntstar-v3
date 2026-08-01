@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+import { RevealText } from "@/components/RevealText";
 
 export const InfiniteMovingCards = ({
   items,
@@ -95,16 +96,16 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className="relative z-20 text-sm leading-[1.6] font-normal text-neutral-800 dark:text-gray-100">
-                {item.quote}
+              <span className="relative z-20 text-sm leading-[1.6] font-normal">
+                <RevealText text={item.quote} variant="ice" revealDelayMs={10} />
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
-                    {item.name}
+                  <span className="text-sm leading-[1.6] font-normal">
+                    <RevealText text={item.name} variant="muted" revealDelayMs={12} />
                   </span>
-                  <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
-                    {item.title}
+                  <span className="text-sm leading-[1.6] font-normal">
+                    <RevealText text={item.title} variant="muted" revealDelayMs={12} />
                   </span>
                 </span>
               </div>

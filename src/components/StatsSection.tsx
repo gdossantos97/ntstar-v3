@@ -1,28 +1,66 @@
+"use client";
+
+import { RevealText } from "@/components/RevealText";
+
 export function StatsSection() {
   return (
     <section className="border-y border-white/10 bg-midnight py-20">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-3 lg:px-8">
         <div>
-          <p className="font-display text-6xl text-lime lg:text-7xl">70%</p>
-          <p className="mt-2 font-display text-2xl text-ice">cheaper. same tool.</p>
-          <p className="mt-4 text-sm text-muted-nt">
-            Built in house, not outsourced to a six month retainer.
+          <RevealText
+            text="70%"
+            variant="display-lime"
+            className="font-display text-6xl lg:text-7xl"
+            as="p"
+          />
+          <RevealText
+            text="cheaper. same tool."
+            variant="display"
+            className="mt-2 block font-display text-2xl"
+            as="p"
+          />
+          <RevealText
+            text="Built in house, not outsourced to a six month retainer."
+            variant="body"
+            className="mt-4 block text-sm"
+            as="p"
+          />
+        </div>
+        <div>
+          <RevealText
+            text="Speed"
+            variant="label"
+            className="label-caps"
+            as="p"
+          />
+          <p className="mt-4 font-display text-2xl">
+            <RevealText
+              text="Quoted 6 months. Live in "
+              variant="display"
+              className="inline"
+            />
+            <RevealText text="9 days." variant="display-lime" className="inline" />
           </p>
         </div>
         <div>
-          <p className="label-caps text-muted-nt">Speed</p>
-          <p className="mt-4 font-display text-2xl text-ice">
-            Quoted 6 months. Live in <span className="text-lime">9 days.</span>
-          </p>
-        </div>
-        <div>
-          <p className="label-caps text-muted-nt">Ownership</p>
-          <p className="mt-4 font-display text-2xl text-ice">
-            Stop renting your own tools
-          </p>
-          <p className="mt-4 text-sm text-muted-nt">
-            Yours to keep. Cancel the contract.
-          </p>
+          <RevealText
+            text="Ownership"
+            variant="label"
+            className="label-caps"
+            as="p"
+          />
+          <RevealText
+            text="Stop renting your own tools"
+            variant="display"
+            className="mt-4 block font-display text-2xl"
+            as="p"
+          />
+          <RevealText
+            text="Yours to keep. Cancel the contract."
+            variant="body"
+            className="mt-4 block text-sm"
+            as="p"
+          />
         </div>
       </div>
     </section>

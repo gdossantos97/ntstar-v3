@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { RevealText } from "@/components/RevealText";
 import { SectionHeading } from "@/components/SectionHeading";
 import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
 
@@ -60,23 +61,31 @@ export function EditorialSection() {
             ntstar
           </p>
 
-          <p className="label-caps text-[#7a7b86]">Release 01</p>
+          <RevealText
+            text="Release 01"
+            variant="label-light"
+            className="label-caps"
+            as="p"
+          />
           <SectionHeading
             prefix="Built with operators,"
             accent="not for procurement"
             className="mt-6 text-4xl sm:text-5xl lg:text-6xl"
-            backgroundClassName="bg-ice"
             variant="light"
             breakBeforeAccent
           />
-          <p className="mt-8 max-w-lg text-base leading-relaxed text-[#3d3e4a] lg:max-w-xl">
-            We started ntstar because we watched good companies get quoted $80k
-            for tools their teams could have been using months ago. We build
-            fast, we build loud, and we hand you the keys when we are done.
-          </p>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-[#3d3e4a] lg:max-w-xl">
-            Ops tools your people actually open. No seats and no renewals.
-          </p>
+          <RevealText
+            text="We started ntstar because we watched good companies get quoted $80k for tools their teams could have been using months ago. We build fast, we build loud, and we hand you the keys when we are done."
+            variant="body-light"
+            className="mt-8 block max-w-lg text-base leading-relaxed lg:max-w-xl"
+            as="p"
+          />
+          <RevealText
+            text="Ops tools your people actually open. No seats and no renewals."
+            variant="body-light"
+            className="mt-4 block max-w-lg text-base leading-relaxed lg:max-w-xl"
+            as="p"
+          />
         </div>
       </div>
     </section>

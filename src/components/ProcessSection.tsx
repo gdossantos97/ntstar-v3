@@ -1,5 +1,6 @@
 "use client";
 
+import { RevealText } from "@/components/RevealText";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Terminal } from "@/components/ui/terminal";
 
@@ -50,7 +51,7 @@ export function ProcessSection() {
   return (
     <section id="how" className="bg-midnight py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
-        <p className="label-caps text-muted-nt">How it works</p>
+        <RevealText text="How it works" variant="label" className="label-caps" as="p" />
         <SectionHeading
           prefix="Three steps."
           accent="One week."
@@ -62,13 +63,24 @@ export function ProcessSection() {
           <div className="grid gap-10">
             {steps.map((step) => (
               <div key={step.num} className="border-t border-white/10 pt-8">
-                <p className="font-display text-4xl text-lime">{step.num}</p>
-                <h3 className="mt-4 text-lg font-medium text-ice">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-nt">
-                  {step.body}
-                </p>
+                <RevealText
+                  text={step.num}
+                  variant="lime"
+                  className="font-display text-4xl"
+                  as="p"
+                />
+                <RevealText
+                  text={step.title}
+                  variant="ice"
+                  className="mt-4 block text-lg font-medium"
+                  as="h3"
+                />
+                <RevealText
+                  text={step.body}
+                  variant="body"
+                  className="mt-3 block text-sm leading-relaxed"
+                  as="p"
+                />
               </div>
             ))}
           </div>
@@ -83,9 +95,12 @@ export function ProcessSection() {
               delayBetweenCommands={1000}
               className="max-w-none px-0"
             />
-            <p className="mt-4 text-center text-xs text-muted-nt">
-              Scroll to watch the build run
-            </p>
+            <RevealText
+              text="Scroll to watch the build run"
+              variant="small"
+              className="mt-4 block text-center text-xs"
+              as="p"
+            />
           </div>
         </div>
       </div>

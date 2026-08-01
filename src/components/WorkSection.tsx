@@ -1,5 +1,6 @@
 "use client";
 
+import { RevealText } from "@/components/RevealText";
 import { SectionHeading } from "@/components/SectionHeading";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
@@ -30,12 +31,11 @@ export function WorkSection() {
   return (
     <section id="work" className="bg-[#0e0e13] py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
-        <p className="label-caps text-muted-nt">The work</p>
+        <RevealText text="The work" variant="label" className="label-caps" as="p" />
         <SectionHeading
           prefix="Real builds."
           accent="Real numbers."
           className="mt-4 text-4xl lg:text-5xl"
-          backgroundClassName="bg-[#0e0e13]"
           breakBeforeAccent
         />
       </div>

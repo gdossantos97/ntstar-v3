@@ -1,66 +1,89 @@
 "use client";
 
+import { RevealText } from "@/components/RevealText";
 import { SectionHeading } from "@/components/SectionHeading";
-import { EvervaultCard } from "@/components/ui/evervault-card";
-import { cn } from "@/lib/utils";
+import { CodeBlock } from "@/components/ui/code-block";
 
-const items = [
+const serviceTabs = [
   {
-    title: "Internal tools",
-    description:
-      "Job tracking, crew dispatch, invoicing. Built around how you work, not how a vendor imagined you work.",
-    span: "md:col-span-2",
+    name: "internal-tools.js",
+    language: "javascript",
+    highlightLines: [7, 8],
+    code: `// Job tracking, crew dispatch, invoicing
+const internalTool = {
+  jobs: "see every open job in one place",
+  crews: "dispatch the right team fast",
+  invoices: "send when work is done",
+  builtFor: "how your ops team works",
+  notFor: "how a vendor imagined you",
+};
+
+ship(internalTool); // live in days, owned outright`,
   },
   {
-    title: "AI automation",
-    description:
-      "The busywork dies on Friday. Practical AI that runs in production, not on a slide deck.",
-    span: "md:col-span-1",
+    name: "ai-automation.js",
+    language: "javascript",
+    highlightLines: [6, 7],
+    code: `// The busywork dies on Friday
+const automation = {
+  task: "repeat work your team does daily",
+  runsIn: "production",
+  notIn: "a slide deck",
+  saves: "hours every week",
+};
+
+run(automation); // practical AI, not theater`,
   },
   {
-    title: "Custom software",
-    description:
-      "SMB to enterprise, same speed. Owned outright, without the procurement theater.",
-    span: "md:col-span-1",
+    name: "custom-software.js",
+    language: "javascript",
+    highlightLines: [6, 7, 8],
+    code: `// SMB to enterprise, same speed
+const yourApp = build({
+  size: "your company, not a template",
+  timeline: "days, not quarters",
+  owned: true,
+  seats: null,
+  renewals: null,
+});
+
+you.keep(yourApp); // no procurement theater`,
   },
   {
-    title: "Your dev agency hates this",
-    description:
-      "Good. We build what they quoted at $80k. In days. For a fraction of the price.",
-    span: "md:col-span-2",
+    name: "vs-agency.js",
+    language: "javascript",
+    highlightLines: [3, 4, 5],
+    code: `// Your dev agency hates this
+const comparison = {
+  agencyQuote: "$80,000",
+  ntstarBuild: "fraction of that",
+  agencyTimeline: "6 months",
+  ntstarTimeline: "days",
+};
+
+// Good. We ship before their second invoice.`,
   },
 ];
 
 export function ServicesSection() {
   return (
-    <section id="build" className="bg-midnight py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-5 lg:px-8">
-        <p className="label-caps text-muted-nt">What we build</p>
+    <section id="build" className="bg-midnight py-28 lg:py-40">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <RevealText text="What we build" variant="label" className="label-caps" as="p" />
         <SectionHeading
           prefix="Software your ops team"
           accent="will actually open"
-          className="mt-4 max-w-2xl text-4xl lg:text-5xl"
+          className="mt-4 max-w-3xl text-4xl lg:text-6xl"
           breakBeforeAccent
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-3 md:auto-rows-[22rem]">
-          {items.map((item) => (
-            <article
-              key={item.title}
-              className={cn(
-                "flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#1a1a22]",
-                item.span,
-              )}
-            >
-              <EvervaultCard className="aspect-auto h-44 w-full md:h-full md:min-h-[12rem] md:flex-1" />
-              <div className="border-t border-white/10 p-5">
-                <h3 className="font-display text-lg text-ice">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-nt">
-                  {item.description}
-                </p>
-              </div>
-            </article>
-          ))}
+        <div className="mt-16 overflow-hidden rounded-2xl border border-white/10 lg:mt-20">
+          <CodeBlock
+            language="javascript"
+            filename="what-we-build"
+            tabs={serviceTabs}
+            size="lg"
+          />
         </div>
       </div>
     </section>

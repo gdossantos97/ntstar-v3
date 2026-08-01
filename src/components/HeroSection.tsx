@@ -1,11 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { FlipWords } from "@/components/ui/flip-words";
+import { RevealText } from "@/components/RevealText";
 import { ShootingStars } from "@/components/ui/shooting-stars";
-import { Spotlight } from "@/components/ui/spotlight";
 import { StarsBackground } from "@/components/ui/stars-background";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 
 export function HeroSection() {
@@ -25,29 +23,25 @@ export function HeroSection() {
         trailColor="#3748bf"
         className="z-[1]"
       />
-      <Spotlight
-        className="-top-40 left-0 z-[2] md:-top-20 md:left-60"
-        fill="#3748bf"
-      />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-20 lg:px-8">
-        <p className="label-caps text-muted-nt">Volume 01 / 2026</p>
+        <RevealText
+          text="Volume 01 / 2026"
+          variant="label"
+          className="label-caps"
+        />
 
-        <h1 className="mt-6 max-w-4xl font-display text-4xl text-ice md:text-7xl lg:text-8xl">
-          Murder your{" "}
-          <FlipWords
-            words={["SaaS bill", "retainer", "agency quote", "tool sprawl"]}
-            className="text-lime"
-          />
+        <h1 className="mt-6 max-w-4xl font-display text-4xl uppercase md:text-7xl lg:text-8xl">
+          <RevealText text="Murder your " variant="ice" className="inline" />
+          <RevealText text="SaaS bill" variant="lime" className="inline" />
         </h1>
 
-        <div className="mt-8 max-w-xl">
-          <TextGenerateEffect
-            words="The ops tool you were quoted $80k for, built in days and owned outright. No seats. No renewals."
-            className="font-normal"
-            duration={0.4}
-          />
-        </div>
+        <RevealText
+          text="The ops tool you were quoted $80k for, built in days and owned outright. No seats. No renewals."
+          variant="body"
+          className="mt-8 block max-w-xl text-base leading-relaxed md:text-lg"
+          as="p"
+        />
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <MovingBorderButton
