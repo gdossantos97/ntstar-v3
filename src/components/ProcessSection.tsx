@@ -49,7 +49,7 @@ const outputs: Record<number, string[]> = {
 
 export function ProcessSection() {
   return (
-    <section id="how" className="bg-midnight py-24 lg:py-32">
+    <section id="how" className="py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <RevealText text="How it works" variant="label" className="label-caps" as="p" />
         <SectionHeading

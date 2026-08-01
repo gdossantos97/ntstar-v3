@@ -3,28 +3,11 @@
 import Link from "next/link";
 import { GlitchAccent } from "@/components/GlitchAccent";
 import { RevealText } from "@/components/RevealText";
-import { ShootingStars } from "@/components/ui/shooting-stars";
-import { StarsBackground } from "@/components/ui/stars-background";
 import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-midnight antialiased pt-24">
-      <StarsBackground
-        starDensity={0.00012}
-        allStarsTwinkle
-        className="z-0"
-      />
-      <ShootingStars
-        minSpeed={12}
-        maxSpeed={28}
-        minDelay={2000}
-        maxDelay={5000}
-        starColor="#ceff1c"
-        trailColor="#3748bf"
-        className="z-[1]"
-      />
-
+    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden pt-24 antialiased">
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-20 lg:px-8">
         <RevealText
           text="Volume 01 / 2026"

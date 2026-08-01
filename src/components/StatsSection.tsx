@@ -4,7 +4,7 @@ import { RevealText } from "@/components/RevealText";
 
 export function StatsSection() {
   return (
-    <section className="border-y border-white/10 bg-midnight py-20">
+    <section className="border-y border-white/10 py-20">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-3 lg:px-8">
         <div>
           <RevealText

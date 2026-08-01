@@ -67,7 +67,7 @@ const comparison = {
 
 export function ServicesSection() {
   return (
-    <section id="build" className="bg-midnight py-28 lg:py-40">
+    <section id="build" className="py-28 lg:py-40">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <RevealText text="What we build" variant="label" className="label-caps" as="p" />
         <SectionHeading

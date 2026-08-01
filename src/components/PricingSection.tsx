@@ -31,7 +31,7 @@ const tiers = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="bg-[#0e0e13] py-24 lg:py-32">
+    <section id="pricing" className="py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <RevealText text="Pricing" variant="label" className="label-caps" as="p" />
         <SectionHeading
