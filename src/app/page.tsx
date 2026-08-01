@@ -8,7 +8,6 @@ import { ProcessSection } from "@/components/ProcessSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { SiteNav } from "@/components/SiteNav";
 import { StatsSection } from "@/components/StatsSection";
-import { WorkSection } from "@/components/WorkSection";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
         <HeroSection />
         <StatsSection />
         <ServicesSection />
-        <WorkSection />
         <ProcessSection />
         <PricingSection />
         <EditorialSection />

@@ -7,7 +7,6 @@ import { Mark } from "./Mark";
 
 const links = [
   { href: "#build", label: "What we build" },
-  { href: "#work", label: "The work" },
   { href: "#how", label: "Process" },
   { href: "#pricing", label: "Pricing" },
 ];

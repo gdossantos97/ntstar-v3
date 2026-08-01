@@ -58,7 +58,7 @@ export function HeroSection() {
             See what we build
           </MovingBorderButton>
           <Link
-            href="#work"
+            href="#build"
             className="text-sm font-medium text-muted-nt transition-colors hover:text-lime"
           >
             Read the receipts →
