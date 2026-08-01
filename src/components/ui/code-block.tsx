@@ -64,22 +64,24 @@ export const CodeBlock = ({
     <div
       className={cn(
         "relative w-full rounded-lg bg-slate-900 font-mono",
-        isLarge ? "min-h-[26rem] p-6 text-base lg:min-h-[30rem] lg:p-8 lg:text-lg" : "p-4 text-sm",
+        isLarge
+          ? "min-h-0 p-4 text-xs sm:min-h-[20rem] sm:p-6 sm:text-sm lg:min-h-[30rem] lg:p-8 lg:text-lg"
+          : "p-4 text-sm",
         className,
       )}
     >
       <div className={cn("flex flex-col", isLarge ? "gap-3" : "gap-2")}>
         {tabsExist && (
-          <div className="flex overflow-x-auto">
+          <div className="no-visible-scrollbar -mx-1 flex overflow-x-auto border-b border-white/10">
             {tabs.map((tab, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
                 className={cn(
-                  "font-sans transition-colors",
-                  isLarge ? "px-4 py-3 text-sm" : "px-3 !py-2 text-xs",
+                  "shrink-0 whitespace-nowrap font-sans transition-colors",
+                  isLarge ? "px-3 py-2.5 text-xs sm:px-4 sm:py-3 sm:text-sm" : "px-3 !py-2 text-xs",
                   activeTab === index
-                    ? "text-white"
+                    ? "border-b-2 border-lime text-white"
                     : "text-zinc-400 hover:text-zinc-200",
                 )}
               >
@@ -100,16 +102,18 @@ export const CodeBlock = ({
           </div>
         )}
       </div>
-      <SyntaxHighlighter
-        language={activeLanguage}
-        style={atomDark}
-        customStyle={{
-          margin: 0,
-          padding: 0,
-          background: "transparent",
-          fontSize: isLarge ? "1.05rem" : "0.875rem",
-          lineHeight: isLarge ? "1.75rem" : "1.5rem",
-        }}
+      <div className="overflow-x-auto">
+        <SyntaxHighlighter
+          language={activeLanguage}
+          style={atomDark}
+          customStyle={{
+            margin: 0,
+            padding: 0,
+            background: "transparent",
+            fontSize: isLarge ? "clamp(0.75rem, 2.5vw, 1.05rem)" : "0.875rem",
+            lineHeight: isLarge ? "1.6" : "1.5rem",
+            minWidth: "min-content",
+          }}
         wrapLines={true}
         showLineNumbers={true}
         lineProps={(lineNumber) => ({
@@ -125,6 +129,7 @@ export const CodeBlock = ({
       >
         {String(activeCode)}
       </SyntaxHighlighter>
+      </div>
     </div>
   );
 };

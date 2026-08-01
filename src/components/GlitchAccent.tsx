@@ -67,7 +67,7 @@ export function GlitchAccent({ text, children, className }: GlitchAccentProps) {
   return (
     <span
       className={cn(
-        "glitch-accent group relative inline-block cursor-default",
+        "glitch-accent group relative inline-block max-w-full cursor-default overflow-hidden",
         active && "is-active",
         className,
       )}

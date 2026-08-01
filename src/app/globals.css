@@ -121,11 +121,25 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
   html {
-    @apply font-sans scroll-smooth;
+    @apply font-sans scroll-smooth overflow-x-hidden;
+  }
+  body {
+    @apply overflow-x-hidden bg-background text-foreground;
+  }
+}
+
+.site-main {
+  padding-top: var(--site-header-height);
+}
+
+:root {
+  --site-header-height: 6.5rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --site-header-height: 7rem;
   }
 }
 
@@ -203,6 +217,10 @@
   text-transform: uppercase;
 }
 
+.glitch-accent {
+  max-width: 100%;
+}
+
 .glitch-accent__matrix {
   text-shadow: 0 0 8px rgba(206, 255, 28, 0.45);
 }
@@ -217,16 +235,18 @@
   white-space: pre;
 }
 
-.glitch-accent:hover .glitch-accent__slice--a,
-.glitch-accent.is-active .glitch-accent__slice--a {
-  opacity: 0.8;
-  animation: glitch-slice-a 0.28s steps(2, end) infinite;
-}
+@media (hover: hover) and (pointer: fine) {
+  .glitch-accent:hover .glitch-accent__slice--a,
+  .glitch-accent.is-active .glitch-accent__slice--a {
+    opacity: 0.8;
+    animation: glitch-slice-a 0.28s steps(2, end) infinite;
+  }
 
-.glitch-accent:hover .glitch-accent__slice--b,
-.glitch-accent.is-active .glitch-accent__slice--b {
-  opacity: 0.8;
-  animation: glitch-slice-b 0.32s steps(2, end) infinite;
+  .glitch-accent:hover .glitch-accent__slice--b,
+  .glitch-accent.is-active .glitch-accent__slice--b {
+    opacity: 0.8;
+    animation: glitch-slice-b 0.32s steps(2, end) infinite;
+  }
 }
 
 @keyframes glitch-slice-a {
@@ -263,4 +283,13 @@
     transform: translate(-1px, 0);
     color: #ceff1c;
   }
+}
+
+.no-visible-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
 }

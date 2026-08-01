@@ -10,8 +10,8 @@ import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 export function CtaSection() {
   return (
     <section id="contact">
-      <BackgroundBeamsWithCollision className="min-h-[70vh] bg-midnight">
-        <div className="flex min-h-[70vh] flex-col items-center justify-center px-5 py-24">
+      <BackgroundBeamsWithCollision className="min-h-[60vh] bg-midnight sm:min-h-[70vh]">
+        <div className="flex min-h-[60vh] flex-col items-center justify-center px-4 py-16 sm:min-h-[70vh] sm:px-5 sm:py-24">
           <RevealText
             text="We are not sorry"
             variant="label-lime"
@@ -20,7 +20,7 @@ export function CtaSection() {
           <SectionHeading
             prefix="Enterprise software"
             accent="is dead"
-            className="mx-auto mt-4 max-w-3xl text-center text-4xl md:text-6xl"
+            className="mx-auto mt-4 max-w-3xl text-center text-3xl sm:text-4xl md:text-6xl"
             breakBeforeAccent
           />
           <RevealText

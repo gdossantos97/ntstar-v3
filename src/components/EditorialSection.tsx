@@ -27,11 +27,11 @@ export function EditorialSection() {
   }, []);
 
   return (
-    <section className="min-h-[80vh] overflow-hidden bg-ice text-midnight">
-      <div className="mx-auto grid min-h-[80vh] max-w-7xl grid-cols-1 lg:grid-cols-2">
+    <section className="overflow-hidden bg-ice text-midnight sm:min-h-[70vh] lg:min-h-[80vh]">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 lg:min-h-[80vh]">
         <div
           ref={containerRef}
-          className="relative min-h-[45vh] lg:min-h-[80vh]"
+          className="relative min-h-[38vh] sm:min-h-[45vh] lg:min-h-[80vh]"
         >
           <PixelatedCanvas
             src="/images/editorial-hand.png"
@@ -52,7 +52,7 @@ export function EditorialSection() {
           />
         </div>
 
-        <div className="relative flex min-h-[35vh] flex-col justify-center px-5 py-12 sm:px-8 lg:min-h-[80vh] lg:px-16 lg:py-16">
+        <div className="relative flex min-h-0 flex-col justify-center px-4 py-10 sm:px-8 sm:py-12 lg:min-h-[80vh] lg:px-16 lg:py-16">
           <p
             className="pointer-events-none absolute right-4 bottom-0 hidden font-brand text-[10rem] leading-none text-midnight/[0.05] lg:block xl:text-[12rem]"
             style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
@@ -70,7 +70,7 @@ export function EditorialSection() {
           <SectionHeading
             prefix="Built with operators,"
             accent="not for procurement"
-            className="mt-6 text-4xl sm:text-5xl lg:text-6xl"
+            className="mt-5 text-3xl sm:mt-6 sm:text-4xl lg:text-6xl"
             variant="light"
             breakBeforeAccent
           />

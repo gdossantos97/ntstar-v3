@@ -1,18 +1,17 @@
-"use client";
-
 import Link from "next/link";
-import { RevealText } from "@/components/RevealText";
 
 export function AnnouncementBar() {
   return (
     <Link
       href="#contact"
-      className="fixed inset-x-0 top-0 z-50 block bg-lime px-4 py-3 text-center text-sm font-medium text-midnight transition-colors hover:bg-[#e4ff7a]"
+      className="block bg-lime px-4 py-2.5 text-center text-[0.6875rem] font-medium leading-snug text-midnight transition-colors hover:bg-[#e4ff7a] sm:py-3 sm:text-sm"
     >
-      <RevealText
-        text="Death to the $80k quote. Your first internal tool ships inside a week →"
-        variant="midnight"
-      />
+      <span className="sm:hidden">
+        $80k quote? Your first tool ships in a week →
+      </span>
+      <span className="hidden sm:inline">
+        Death to the $80k quote. Your first internal tool ships inside a week →
+      </span>
     </Link>
   );
 }

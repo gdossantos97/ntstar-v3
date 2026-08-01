@@ -67,17 +67,17 @@ const comparison = {
 
 export function ServicesSection() {
   return (
-    <section id="build" className="py-28 lg:py-40">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="build" className="py-16 sm:py-28 lg:py-40">
+      <div className="mx-auto max-w-7xl px-4 sm:px-5 lg:px-8">
         <RevealText text="What we build" variant="label" className="label-caps" as="p" />
         <SectionHeading
           prefix="Software your ops team"
           accent="will actually open"
-          className="mt-4 max-w-3xl text-4xl lg:text-6xl"
+          className="mt-4 max-w-3xl text-3xl sm:text-4xl lg:text-6xl"
           breakBeforeAccent
         />
 
-        <div className="mt-16 overflow-hidden rounded-2xl border border-white/10 lg:mt-20">
+        <div className="-mx-4 mt-10 overflow-hidden rounded-none border-y border-white/10 sm:mx-0 sm:mt-16 sm:rounded-2xl sm:border lg:mt-20">
           <CodeBlock
             language="javascript"
             filename="what-we-build"

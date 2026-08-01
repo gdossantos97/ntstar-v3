@@ -4,13 +4,13 @@ import { RevealText } from "@/components/RevealText";
 
 export function StatsSection() {
   return (
-    <section className="border-y border-white/10 py-20">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-3 lg:px-8">
+    <section className="border-y border-white/10 py-14 sm:py-20">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:gap-12 sm:px-5 md:grid-cols-3 lg:px-8">
         <div>
           <RevealText
             text="70%"
             variant="display-lime"
-            className="font-display text-6xl lg:text-7xl"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl"
             as="p"
           />
           <RevealText

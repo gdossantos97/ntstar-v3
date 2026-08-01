@@ -31,13 +31,13 @@ const tiers = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-5 lg:px-8">
+    <section id="pricing" className="py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 lg:px-8">
         <RevealText text="Pricing" variant="label" className="label-caps" as="p" />
         <SectionHeading
           prefix="Pay once."
           accent="Own it forever."
-          className="mt-4 text-4xl lg:text-5xl"
+          className="mt-4 text-3xl sm:text-4xl lg:text-5xl"
           breakBeforeAccent
         />
         <RevealText

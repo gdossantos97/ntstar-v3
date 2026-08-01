@@ -49,17 +49,17 @@ const outputs: Record<number, string[]> = {
 
 export function ProcessSection() {
   return (
-    <section id="how" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-5 lg:px-8">
+    <section id="how" className="py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-5 lg:px-8">
         <RevealText text="How it works" variant="label" className="label-caps" as="p" />
         <SectionHeading
           prefix="Three steps."
           accent="One week."
-          className="mt-4 text-4xl lg:text-5xl"
+          className="mt-4 text-3xl sm:text-4xl lg:text-5xl"
           breakBeforeAccent
         />
 
-        <div className="mt-16 grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="mt-10 grid items-start gap-10 sm:mt-16 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="grid gap-10">
             {steps.map((step) => (
               <div key={step.num} className="border-t border-white/10 pt-8">
@@ -85,7 +85,7 @@ export function ProcessSection() {
             ))}
           </div>
 
-          <div className="lg:sticky lg:top-28">
+          <div className="min-w-0 lg:sticky lg:top-[calc(var(--site-header-height)+1rem)]">
             <Terminal
               commands={commands}
               outputs={outputs}
@@ -93,7 +93,7 @@ export function ProcessSection() {
               enableSound={false}
               typingSpeed={45}
               delayBetweenCommands={1000}
-              className="max-w-none px-0"
+              className="max-w-none overflow-hidden px-0"
             />
             <RevealText
               text="Scroll to watch the build run"
