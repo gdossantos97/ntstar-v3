@@ -1,3 +1,7 @@
+"use client";
+
+import { Terminal } from "@/components/ui/terminal";
+
 const steps = [
   {
     num: "01",
@@ -16,6 +20,31 @@ const steps = [
   },
 ];
 
+const commands = [
+  "ntstar init restoration_ops",
+  "ntstar build --days 7",
+  "ntstar ship --owned",
+];
+
+const outputs: Record<number, string[]> = {
+  0: [
+    "Call complete. 3 broken workflows found.",
+    "Agency quote on file: $80,000",
+    "Starting build...",
+  ],
+  1: [
+    "Job tracking .............. done",
+    "Crew dispatch ............. done",
+    "Invoicing ................. done",
+    "Shipped in 6 days.",
+  ],
+  2: [
+    "Deployed to production.",
+    "No seats. No renewals.",
+    "You own it. Cancel the contract.",
+  ],
+};
+
 export function ProcessSection() {
   return (
     <section id="how" className="bg-midnight py-24 lg:py-32">
@@ -25,16 +54,35 @@ export function ProcessSection() {
           Three steps. One week.
         </h2>
 
-        <div className="mt-16 grid gap-10 md:grid-cols-3">
-          {steps.map((step) => (
-            <div key={step.num} className="border-t border-white/10 pt-8">
-              <p className="font-display text-4xl text-lime">{step.num}</p>
-              <h3 className="mt-4 text-lg font-medium text-ice">{step.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-nt">
-                {step.body}
-              </p>
-            </div>
-          ))}
+        <div className="mt-16 grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-10">
+            {steps.map((step) => (
+              <div key={step.num} className="border-t border-white/10 pt-8">
+                <p className="font-display text-4xl text-lime">{step.num}</p>
+                <h3 className="mt-4 text-lg font-medium text-ice">
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-nt">
+                  {step.body}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="lg:sticky lg:top-28">
+            <Terminal
+              commands={commands}
+              outputs={outputs}
+              username="ntstar"
+              enableSound={false}
+              typingSpeed={45}
+              delayBetweenCommands={1000}
+              className="max-w-none px-0"
+            />
+            <p className="mt-4 text-center text-xs text-muted-nt">
+              Scroll to watch the build run
+            </p>
+          </div>
         </div>
       </div>
     </section>

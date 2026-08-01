@@ -1,20 +1,34 @@
 "use client";
 
 import Link from "next/link";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import { FlipWords } from "@/components/ui/flip-words";
+import { ShootingStars } from "@/components/ui/shooting-stars";
 import { Spotlight } from "@/components/ui/spotlight";
+import { StarsBackground } from "@/components/ui/stars-background";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 
 export function HeroSection() {
   return (
     <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-midnight antialiased pt-24">
+      <StarsBackground
+        starDensity={0.00012}
+        allStarsTwinkle
+        className="z-0"
+      />
+      <ShootingStars
+        minSpeed={12}
+        maxSpeed={28}
+        minDelay={2000}
+        maxDelay={5000}
+        starColor="#ceff1c"
+        trailColor="#3748bf"
+        className="z-[1]"
+      />
       <Spotlight
-        className="-top-40 left-0 md:-top-20 md:left-60"
+        className="-top-40 left-0 z-[2] md:-top-20 md:left-60"
         fill="#3748bf"
       />
-      <BackgroundBeams className="absolute inset-0 z-0" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-20 lg:px-8">
         <p className="label-caps text-muted-nt">Volume 01 / 2026</p>
