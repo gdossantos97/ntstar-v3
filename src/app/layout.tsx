@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: "ntstar | Murder your software bloat",
   description:
     "Custom software and AI automation for operators who refuse to wait. Built in days. Owned outright.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "ntstar | Enterprise software is dead.",
     description:

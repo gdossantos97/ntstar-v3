@@ -122,7 +122,16 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply font-sans scroll-smooth overflow-x-hidden;
+    @apply font-sans overflow-x-hidden;
+    scroll-behavior: auto;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @media (min-width: 768px) {
+      html {
+        scroll-behavior: smooth;
+      }
+    }
   }
   body {
     @apply overflow-x-hidden bg-background font-sans text-foreground;
@@ -153,6 +162,7 @@
   --color-muted-nt: #9b9ba6;
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
   --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  --animate-jiggle: jiggle 4s ease-in-out infinite;
 }
 
 .font-display {
@@ -195,6 +205,32 @@
 @keyframes scroll {
   to {
     transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+@keyframes jiggle {
+  0%,
+  85%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  88% {
+    transform: translate(-2px, 0) rotate(-1deg);
+  }
+  91% {
+    transform: translate(2px, 0) rotate(1deg);
+  }
+  94% {
+    transform: translate(-1px, 0) rotate(-0.5deg);
+  }
+  97% {
+    transform: translate(1px, 0) rotate(0.5deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-jiggle {
+    animation: none;
   }
 }
 

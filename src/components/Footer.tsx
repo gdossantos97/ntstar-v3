@@ -35,8 +35,8 @@ export function Footer({ embedded = false }: FooterProps) {
         </div>
 
         <div className="flex flex-col gap-2 text-sm text-muted-nt sm:text-right">
-          <Link href="mailto:hello@ntstar.com" className="hover:text-ice">
-            <RevealText text="hello@ntstar.com" variant="body" />
+          <Link href="mailto:ian@nstar.com" className="hover:text-ice">
+            <RevealText text="ian@nstar.com" variant="body" />
           </Link>
           <RevealText
             text="Volume 01 / 2026"

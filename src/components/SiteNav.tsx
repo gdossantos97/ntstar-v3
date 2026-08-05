@@ -14,7 +14,7 @@ export function SiteNav() {
 
       <Link
         href="#contact"
-        className="ml-auto inline-flex rounded-full bg-lime px-4 py-2 text-sm font-medium text-midnight transition-colors hover:bg-[#e4ff7a]"
+        className="animate-jiggle ml-auto inline-flex rounded-full bg-lime px-4 py-2 text-sm font-medium text-midnight transition-colors hover:bg-[#e4ff7a] md:animate-none"
       >
         Book a call
       </Link>

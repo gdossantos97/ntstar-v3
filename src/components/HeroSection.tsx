@@ -1,9 +1,8 @@
-"use client"; 
+"use client";
 
 import Link from "next/link";
 import { GlitchAccent } from "@/components/GlitchAccent";
 import { RevealText } from "@/components/RevealText";
-import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 
 export function HeroSection() {
   return (
@@ -29,22 +28,12 @@ export function HeroSection() {
           as="p"
         />
 
-        <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-          <MovingBorderButton
-            as={Link}
-            href="#contact"
-            borderRadius="0.5rem"
-            containerClassName="h-12 w-full sm:w-44"
-            className="border-violet/30 bg-midnight/90 text-sm font-medium text-ice"
-            borderClassName="bg-[radial-gradient(#ceff1c_40%,#3748bf_60%,transparent_70%)]"
-          >
-            See what we build
-          </MovingBorderButton>
+        <div className="mt-8 sm:mt-10">
           <Link
-            href="#build"
-            className="text-center text-sm font-medium text-muted-nt transition-colors hover:text-lime sm:text-left"
+            href="#contact"
+            className="animate-jiggle inline-flex h-12 w-full items-center justify-center rounded-full bg-lime px-8 text-sm font-medium text-midnight transition-colors hover:bg-[#e4ff7a] sm:w-auto"
           >
-            See the goods →
+            Book a call
           </Link>
         </div>
       </div>

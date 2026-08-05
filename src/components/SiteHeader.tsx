@@ -22,8 +22,8 @@ export function SiteHeader() {
         className={cn(
           "relative border-b transition-[background-color,box-shadow,border-color] duration-300",
           scrolled
-            ? "border-white/12 bg-midnight/97 shadow-[0_12px_40px_rgba(0,0,0,0.55)] backdrop-blur-xl"
-            : "border-white/10 bg-midnight/92 backdrop-blur-lg",
+            ? "border-white/12 bg-midnight shadow-[0_12px_40px_rgba(0,0,0,0.55)] md:bg-midnight/97 md:backdrop-blur-xl"
+            : "border-white/10 bg-midnight md:bg-midnight/92 md:backdrop-blur-lg",
         )}
       >
         <div
