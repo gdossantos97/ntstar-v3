@@ -15,11 +15,11 @@ function EditorialAsciiPanel() {
       ref={containerRef}
       className="relative flex min-h-[50vh] items-center justify-center px-6 py-12 sm:min-h-[55vh] lg:min-h-[80vh] lg:px-10"
     >
-      <div className="aspect-square w-full min-h-[280px] max-w-md lg:max-w-lg">
+      <div className="aspect-[670/370] w-full min-h-[200px] max-w-md lg:max-w-lg">
         {isInView ? (
           <AsciiArt
-            src="/images/editorial-hand.png"
-            resolution={80}
+            src="/images/mark-yellow.png"
+            resolution={100}
             color="#CEFF1C"
             inverted
             animationStyle="typewriter"
@@ -27,7 +27,7 @@ function EditorialAsciiPanel() {
             animateOnView={false}
             backgroundColor="transparent"
             className="h-full w-full"
-            objectFit="cover"
+            objectFit="contain"
           />
         ) : null}
       </div>

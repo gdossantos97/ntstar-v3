@@ -23,7 +23,7 @@ export function HeroSection() {
         </h1>
 
         <RevealText
-          text="Custom ops tools built in days and handed over with the keys attached. The kind your team actually opens on Monday morning."
+          text="Software built in 7 days or your money back guaranteed"
           variant="body"
           className="mt-6 block max-w-xl text-base leading-relaxed sm:mt-8 md:text-lg"
           as="p"
