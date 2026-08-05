@@ -395,7 +395,7 @@ export const AsciiArt: React.FC<AsciiArtProps> = ({
         animationStyle === "fade"
           ? animationDuration * 1000
           : animationStyle === "typewriter"
-            ? asciiData.length * asciiData[0]?.length * 2
+            ? asciiData.length * asciiData[0]?.length * 1.5
             : animationStyle === "matrix"
               ? 3000
               : 1000;
