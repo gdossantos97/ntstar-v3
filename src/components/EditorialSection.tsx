@@ -1,60 +1,49 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
+import { useInView } from "motion/react";
 import { RevealText } from "@/components/RevealText";
 import { SectionHeading } from "@/components/SectionHeading";
-import { PixelatedCanvas } from "@/components/ui/pixelated-canvas";
+import { AsciiArt } from "@/components/ui/ascii-art";
 
-export function EditorialSection() {
+function EditorialAsciiPanel() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [size, setSize] = useState({ width: 600, height: 700 });
-
-  useEffect(() => {
-    const node = containerRef.current;
-    if (!node) return;
-
-    const update = () => {
-      setSize({
-        width: node.offsetWidth,
-        height: node.offsetHeight,
-      });
-    };
-
-    update();
-    const observer = new ResizeObserver(update);
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
+  const isInView = useInView(containerRef, { once: true, amount: 0.25 });
 
   return (
-    <section className="overflow-hidden bg-ice text-midnight sm:min-h-[70vh] lg:min-h-[80vh]">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 lg:min-h-[80vh]">
-        <div
-          ref={containerRef}
-          className="relative min-h-[38vh] sm:min-h-[45vh] lg:min-h-[80vh]"
-        >
-          <PixelatedCanvas
+    <div
+      ref={containerRef}
+      className="relative flex min-h-[50vh] items-center justify-center px-6 py-12 sm:min-h-[55vh] lg:min-h-[80vh] lg:px-10"
+    >
+      <div className="aspect-square w-full min-h-[280px] max-w-md lg:max-w-lg">
+        {isInView ? (
+          <AsciiArt
             src="/images/editorial-hand.png"
-            width={size.width}
-            height={size.height}
-            cellSize={4}
-            dotScale={0.85}
-            shape="square"
-            backgroundColor="#F5F6FC"
-            grayscale
-            interactive
-            distortionMode="swirl"
-            distortionStrength={5}
-            distortionRadius={100}
-            dropoutStrength={0.25}
+            resolution={80}
+            color="#CEFF1C"
+            inverted
+            animationStyle="typewriter"
+            animated
+            animateOnView={false}
+            backgroundColor="transparent"
+            className="h-full w-full"
             objectFit="cover"
-            className="absolute inset-0 h-full w-full"
           />
-        </div>
+        ) : null}
+      </div>
+    </div>
+  );
+}
+
+export function EditorialSection() {
+  return (
+    <section className="overflow-hidden sm:min-h-[70vh] lg:min-h-[80vh]">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 lg:min-h-[80vh]">
+        <EditorialAsciiPanel />
 
         <div className="relative flex min-h-0 flex-col justify-center px-4 py-10 sm:px-8 sm:py-12 lg:min-h-[80vh] lg:px-16 lg:py-16">
           <p
-            className="pointer-events-none absolute right-4 bottom-0 hidden font-brand text-[10rem] leading-none text-midnight/[0.05] lg:block xl:text-[12rem]"
+            className="pointer-events-none absolute right-4 bottom-0 hidden font-brand text-[10rem] leading-none text-ice/[0.05] lg:block xl:text-[12rem]"
             style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
             aria-hidden
           >
@@ -63,7 +52,7 @@ export function EditorialSection() {
 
           <RevealText
             text="Release 01"
-            variant="label-light"
+            variant="label"
             className="label-caps"
             as="p"
           />
@@ -71,18 +60,17 @@ export function EditorialSection() {
             prefix="Built for operators,"
             accent="not committees"
             className="mt-5 text-3xl sm:mt-6 sm:text-4xl lg:text-6xl"
-            variant="light"
             breakBeforeAccent
           />
           <RevealText
             text="We started ntstar because we watched good companies wait six months for software their teams needed yesterday. We build fast, we build loud, and we hand you the keys when we are done."
-            variant="body-light"
+            variant="body"
             className="mt-8 block max-w-lg text-base leading-relaxed lg:max-w-xl"
             as="p"
           />
           <RevealText
             text="Ops tools your people actually open. Built like you mean it."
-            variant="body-light"
+            variant="body"
             className="mt-4 block max-w-lg text-base leading-relaxed lg:max-w-xl"
             as="p"
           />
