@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Custom software and AI automation for operators who refuse to wait. Built in days. Owned outright.",
   icons: {
-    icon: "/icon.svg",
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     shortcut: "/icon.svg",
     apple: "/icon.svg",
   },
