@@ -7,6 +7,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteStarfield } from "@/components/SiteStarfield";
 import { StatsSection } from "@/components/StatsSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
           <ServicesSection />
           <ProcessSection />
           <PricingSection />
+          <TestimonialsSection />
           <EditorialSection />
           <CtaSection />
         </main>
