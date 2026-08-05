@@ -7,9 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-groovy), "Not Just Groovy", sans-serif;
+  --font-mono: var(--font-ui), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-heading: var(--font-groovy), "Not Just Groovy", sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -125,7 +125,9 @@
     @apply font-sans scroll-smooth overflow-x-hidden;
   }
   body {
-    @apply overflow-x-hidden bg-background text-foreground;
+    @apply overflow-x-hidden bg-background font-sans text-foreground;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
   }
 }
 
@@ -143,12 +145,6 @@
   }
 }
 
-@font-face {
-  font-family: "Not Just Groovy";
-  src: url("/fonts/NotJustGroovy.ttf") format("truetype");
-  font-display: swap;
-}
-
 @theme inline {
   --color-midnight: #14141a;
   --color-ice: #f5f6fc;
@@ -157,6 +153,32 @@
   --color-muted-nt: #9b9ba6;
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
   --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+}
+
+.font-display {
+  font-family: var(--font-groovy), "Not Just Groovy", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+}
+
+.font-brand {
+  font-family: var(--font-groovy), "Not Just Groovy", sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.font-terminal {
+  font-family: var(--font-ui), Inter, ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: normal;
+  letter-spacing: normal;
+}
+
+.label-caps {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 @keyframes spotlight {
@@ -194,27 +216,6 @@
   --border: #24242e;
   --input: #3d3d4a;
   --ring: #3748bf;
-}
-
-.font-display {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -0.035em;
-  line-height: 0.92;
-}
-
-.font-brand {
-  font-family: "Not Just Groovy", "Helvetica Neue", sans-serif;
-  letter-spacing: 0.02em;
-  line-height: 1;
-}
-
-.label-caps {
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
 }
 
 .glitch-accent {

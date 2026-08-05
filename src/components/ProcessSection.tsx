@@ -98,7 +98,7 @@ export function ProcessSection() {
             <RevealText
               text="Scroll to watch the build run"
               variant="small"
-              className="mt-4 block text-center text-xs"
+              className="font-terminal mt-4 block text-center text-xs"
               as="p"
             />
           </div>
