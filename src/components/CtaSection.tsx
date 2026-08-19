@@ -32,7 +32,7 @@ export function CtaSection() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <MovingBorderButton
               as={Link}
-              href="mailto:ian@nstar.com"
+              href="tel:+12672928101"
               borderRadius="0.5rem"
               containerClassName="h-12 w-40"
               className="border-violet/30 bg-midnight/90 text-sm font-medium text-ice"

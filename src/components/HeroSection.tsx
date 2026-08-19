@@ -30,7 +30,7 @@ export function HeroSection() {
 
         <div className="mt-8 sm:mt-10">
           <Link
-            href="#contact"
+            href="tel:+12672928101"
             className="animate-jiggle inline-flex h-12 w-full items-center justify-center rounded-full bg-lime px-8 text-sm font-medium text-midnight transition-colors hover:bg-[#e4ff7a] sm:w-auto"
           >
             Book a call
